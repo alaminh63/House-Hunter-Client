@@ -14,7 +14,7 @@ const ManageHouse = () => {
     enabled: !loading,
     queryFn: async () => {
       const response = await axios.get(
-        `http://localhost:5000/ownhouse/${user?.email}`
+        `https://house-hunter-server-indol.vercel.app/ownhouse/${user?.email}`
       );
       return response.data;
     },
@@ -33,7 +33,9 @@ const ManageHouse = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .delete(`http://localhost:5000/deletehouse/${book._id}`)
+          .delete(
+            `https://house-hunter-server-indol.vercel.app/deletehouse/${book._id}`
+          )
           .then((res) => {
             if (res.data.deletedCount > 0) {
               refetch();

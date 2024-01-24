@@ -53,7 +53,10 @@ const UpdateHouse = () => {
     };
 
     axios
-      .put(`http://localhost:5000/updatehouse/${loadedHouse._id}`, updateHouse)
+      .put(
+        `https://house-hunter-server-indol.vercel.app/updatehouse/${loadedHouse._id}`,
+        updateHouse
+      )
       .then((res) => {
         if (res.data.modifiedCount > 0) {
           navigate("/dashboard/managehouse");

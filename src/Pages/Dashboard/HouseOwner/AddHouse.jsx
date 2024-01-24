@@ -50,18 +50,20 @@ const AddHouse = () => {
       description,
     };
 
-    axios.post(`http://localhost:5000/addhouse/`, addHouse).then((res) => {
-      if (res.data.insertedId) {
-        reset();
-        Swal.fire({
-          position: "top-end",
-          icon: "success",
-          title: "Your house has been added successful",
-          showConfirmButton: false,
-          timer: 1500,
-        });
-      }
-    });
+    axios
+      .post(`https://house-hunter-server-indol.vercel.app/addhouse/`, addHouse)
+      .then((res) => {
+        if (res.data.insertedId) {
+          reset();
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Your house has been added successful",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        }
+      });
   };
 
   return (

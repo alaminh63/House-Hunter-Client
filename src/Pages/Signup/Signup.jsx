@@ -21,19 +21,21 @@ const Signup = () => {
     const { name, email, password, role } = data;
     const registerUser = { name, email, password, role };
 
-    axios.post("http://localhost:5000/signup", registerUser).then((res) => {
-      if (res.data.insertedId) {
-        reset();
-        Swal.fire({
-          position: "top-end",
-          icon: "success",
-          title: "Your account created successful",
-          showConfirmButton: false,
-          timer: 1500,
-        });
-        navigate("/login");
-      }
-    });
+    axios
+      .post("https://house-hunter-server-indol.vercel.app/signup", registerUser)
+      .then((res) => {
+        if (res.data.insertedId) {
+          reset();
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Your account created successful",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+          navigate("/login");
+        }
+      });
   };
 
   return (

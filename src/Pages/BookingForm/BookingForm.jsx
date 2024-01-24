@@ -53,25 +53,27 @@ const BookingForm = () => {
       houseId: _id,
     };
     console.log(bookHouse);
-    axios.post(`http://localhost:5000/mybooking`, bookHouse).then((res) => {
-      console.log(res.data);
-      if (res.data.insertedId) {
-        reset();
-        Swal.fire({
-          position: "top-end",
-          icon: "success",
-          title: "You booked this house",
-          showConfirmButton: false,
-          timer: 1500,
-        });
-      } else {
-        Swal.fire({
-          icon: "error",
-          title: "Oops...",
-          text: "This house already added to your booking list",
-        });
-      }
-    });
+    axios
+      .post(`https://house-hunter-server-indol.vercel.app/mybooking`, bookHouse)
+      .then((res) => {
+        console.log(res.data);
+        if (res.data.insertedId) {
+          reset();
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "You booked this house",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        } else {
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "This house already added to your booking list",
+          });
+        }
+      });
   };
 
   return (

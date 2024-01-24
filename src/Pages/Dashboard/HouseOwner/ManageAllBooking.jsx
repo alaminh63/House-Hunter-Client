@@ -13,7 +13,7 @@ const ManageAllBooking = () => {
     enabled: !loading,
     queryFn: async () => {
       const response = await axios.get(
-        `http://localhost:5000/bookedhouse/${user?.email}`
+        `https://house-hunter-server-indol.vercel.app/bookedhouse/${user?.email}`
       );
       return response.data;
     },
@@ -32,7 +32,9 @@ const ManageAllBooking = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .delete(`http://localhost:5000/booking/${book._id}`)
+          .delete(
+            `https://house-hunter-server-indol.vercel.app/booking/${book._id}`
+          )
           .then((res) => {
             if (res.data.deletedCount > 0) {
               refetch();
@@ -60,7 +62,9 @@ const ManageAllBooking = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .patch(`http://localhost:5000/approvedbooking/${book._id}`)
+          .patch(
+            `https://house-hunter-server-indol.vercel.app/approvedbooking/${book._id}`
+          )
           .then((res) => {
             if (res.data.modifiedCount > 0) {
               refetch();

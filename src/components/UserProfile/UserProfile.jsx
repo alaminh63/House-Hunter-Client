@@ -8,7 +8,7 @@ const UserProfile = () => {
   const [userProfile, setUserProfile] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:5000/profile/${user?.email}`)
+    fetch(`https://house-hunter-server-indol.vercel.app/profile/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setUserProfile(data);

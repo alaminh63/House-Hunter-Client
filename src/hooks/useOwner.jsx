@@ -9,7 +9,9 @@ const useOwner = () => {
     queryKey: ["isOwner", user?.email],
     enabled: !loading,
     queryFn: async () => {
-      const res = await axios.get(`http://localhost:5000/owner/${user?.email}`);
+      const res = await axios.get(
+        `https://house-hunter-server-indol.vercel.app/owner/${user?.email}`
+      );
       return res.data.owner;
     },
   });

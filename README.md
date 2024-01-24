@@ -1,7 +1,7 @@
 ## Summery of this project
 
-<p align="center">Live Link : https://jovial-cobbler-980c74.netlify.app/ <p />
-  <h3 align="center"><a href="https://jovial-cobbler-980c74.netlify.app/ ">House Hunter</a></h3>
+<p align="center">Live Link : https://househunter-2b64b.web.app <p />
+  <h3 align="center"><a href="https://househunter-2b64b.web.app ">House Hunter</a></h3>
   
   * Development with Vite React jsx.
   * Use Custom authentication for signin / signup, use mongodb and JWT.

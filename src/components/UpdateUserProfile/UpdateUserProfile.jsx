@@ -31,7 +31,10 @@ const UpdateProfile = () => {
     //   console.log(upadteProfile);
 
     axios
-      .put(`http://localhost:5000/updateprofile/${loadUser._id}`, upadteProfile)
+      .put(
+        `https://house-hunter-server-indol.vercel.app/updateprofile/${loadUser._id}`,
+        upadteProfile
+      )
       .then((res) => {
         if (res.data.modifiedCount > 0) {
           reset();
