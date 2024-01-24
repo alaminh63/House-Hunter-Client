@@ -4,8 +4,5 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [require("rippleui")],
-  rippleui: {
-    removeThemes: ["dark"],
-  },
+  plugins: [require("daisyui")],
 };
