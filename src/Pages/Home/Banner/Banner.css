@@ -1,0 +1,139 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800;900&display=swap');
+
+body {
+    font-family: 'Gabarito', cursive;
+}
+
+.new-banner {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgb(17, 57, 70, 1), rgb(234, 215, 187, 0.6)), url("https://images.unsplash.com/photo-1624304314520-8acb626f91f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80");
+    background-size: cover;
+    background-position: center;
+}
+
+.new-navbar {
+    width: 85%;
+    margin: auto;
+    padding: 35px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.new-logo {
+    width: 100px;
+    cursor: pointer;
+}
+
+.new-navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.new-navbar ul li a {
+    text-decoration: none;
+    color: #FDE5D4;
+    text-transform: uppercase;
+}
+
+.new-navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: white;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.4s;
+}
+
+.new-navbar ul li:hover::after {
+    width: 100%;
+}
+
+.new-content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    right: 25%;
+    width: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+}
+
+/* .new-content h1 {
+    font-size: 70px;
+    margin-top: 60px;
+    font-weight: 900;
+    color: #0F0F0F;
+    text-transform: uppercase;
+} */
+
+.new-content p {
+    margin: 40px 0px;
+    font-weight: 100;
+    line-height: 25px;
+    color: #0F0F0F;
+    opacity: 0.8;
+}
+
+.new-button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #0F0F0F;
+    background: transparent;
+    color: #0F0F0F;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: 0.9s;
+    text-transform: uppercase;
+}
+
+.new-button span {
+    background-color: #0F0F0F;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 1s;
+}
+
+.new-button:hover {
+    color: white;
+}
+
+.new-button:hover span {
+    width: 100%;
+}
+
+.new-social {
+    width: 50%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin-top: 75px;
+    cursor: pointer;
+}
+
+.new-social i {
+    color: #0F0F0F;
+    transition: 0.5s;
+    transform: scale(1);
+}
+
+.new-social i:hover {
+    transform: scale(1.7);
+}
