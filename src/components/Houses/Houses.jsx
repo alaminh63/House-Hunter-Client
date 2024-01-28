@@ -2,8 +2,9 @@ import axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-import useOwner from "../../../hooks/useOwner";
-import { AuthContext } from "../../../providers/AuthProvider";
+import useOwner from "../../hooks/useOwner";
+import { AuthContext } from "../../providers/AuthProvider";
+import "./House.css";
 
 const Houses = () => {
   const [houses, setHouses] = useState([]);
@@ -209,18 +210,18 @@ const Houses = () => {
           </div>
         </div>
         <div className="w-4/5">
-          <div className="grid gap-6 mx-auto mb-8 lg:grid-cols-3 sm:grid-cols-1">
+          <div className="grid gap-2 mx-auto mb-8 lg:grid-cols-3 sm:grid-cols-1">
             {houses.map((house) => (
               <div key={house._id}>
                 <div className="">
-                  <div className="card-container md:w-96 md:h-[30rem]">
+                  <div className="card-container">
                     <div className="card">
                       <div className="img-content">
                         <img
                           src={house.picture}
                           alt="house cover"
                           className="object-cover w-full "
-                          style={{ height: "430px" }}
+                          style={{ height: "470px" }}
                         />
                       </div>
                       <div className=" h-full px-6 py-4 bg-opacity-80 opacity-0 hover:opacity-100 text-white  text-center absolute inset-0 transition-opacity duration-200 flex flex-col gap-1">

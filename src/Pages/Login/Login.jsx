@@ -13,82 +13,6 @@ const Login = () => {
   const navigate = useNavigate();
   const { getUserData } = useContext(AuthContext);
 
-  const cardStyles = {
-    card: {
-      width: "100%",
-      maxWidth: "300px",
-      minWidth: "200px",
-      height: "250px",
-      backgroundColor: "#292929",
-      margin: "10px",
-      borderRadius: "10px",
-      boxShadow: "0px 2px 10px rgba(0, 0, 0, 0.24)",
-      border: "2px solid rgba(7, 7, 7, 0.12)",
-      fontSize: "16px",
-      transition: "all 0.3s ease",
-      position: "relative",
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      flexDirection: "column",
-      cursor: "pointer",
-      fontFamily: "'Poppins', sans-serif",
-    },
-    icon: {
-      margin: "0 auto",
-      width: "100%",
-      height: "80px",
-      maxWidth: "80px",
-      background:
-        "linear-gradient(90deg, #7eaaff 0%, #ff48fb 40%, rgba(0, 0, 0, 0.28) 60%)",
-      borderRadius: "100%",
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      transition: "all 0.8s ease",
-      backgroundPosition: "0px",
-      backgroundSize: "200px",
-    },
-    icon_svg: { fill: "white" },
-    card__title: {
-      width: "100%",
-      margin: "0",
-      textAlign: "center",
-      marginTop: "30px",
-      color: "white",
-      fontWeight: "600",
-      textTransform: "uppercase",
-      letterSpacing: "4px",
-    },
-    card__text: {
-      width: "80%",
-      margin: "0 auto",
-      fontSize: "13px",
-      textAlign: "center",
-      marginTop: "20px",
-      color: "white",
-      fontWeight: "200",
-      letterSpacing: "2px",
-      opacity: "0",
-      maxHeight: "0",
-      transition: "all 0.3s ease",
-    },
-    card_hover: { height: "270px" },
-    card_hover__text: {
-      transition: "all 0.3s ease",
-      opacity: "1",
-      maxHeight: "40px",
-    },
-    card_hover__icon: {
-      backgroundPosition: "-120px",
-      transition: "all 0.3s ease",
-    },
-    card_hover__icon_svg_path: {
-      fill: "url('#gradientColor')",
-      transition: "all 0.3s ease",
-    },
-  };
-
   const {
     register,
     handleSubmit,
@@ -176,26 +100,6 @@ const Login = () => {
           <Link className="text-green-500" to="/signup">
             Signup
           </Link>
-        </p>
-      </div>
-      <div style={cardStyles.card}>
-        <div style={cardStyles.icon}>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            height="38px"
-            width="38px"
-            version="1.1"
-            id="heart"
-            viewBox="0 0 471.701 471.701"
-            xml:space="preserve"
-          >
-            {/* ... (SVG content) */}
-          </svg>
-        </div>
-        <p style={cardStyles.card__title}>Favourites</p>
-        <p style={cardStyles.card__text}>
-          Check all your favourites in one place.
         </p>
       </div>
     </div>
